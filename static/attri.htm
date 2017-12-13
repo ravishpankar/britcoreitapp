@@ -1,0 +1,22 @@
+<div class="form-group">
+    <table style="width : 100%" class="table table-striped">
+        <tr>
+            <td style="width : 50%">
+                <div class="text-right">
+                    <label>{{$ctrl.attr.rtaname + ": "}}</label>
+                </div>
+            </td>
+            <td  style="width : 50%">
+                <select class="form-control" ng-show="$ctrl.attr.rtatype == 'enum'">
+                    <option ng-repeat="(key, value) in $ctrl.attr.enum">{{key}}</option>
+                </select>
+                <input type="text" class="form-control" ng-show="$ctrl.attr.rtatype == 'text'">
+                </input>
+                <input type="number" class="form-control" ng-show="$ctrl.attr.rtatype == 'number'">
+                </input>
+                <input type="date" class="form-control" ng-show="$ctrl.attr.rtatype == 'date'">
+                </input>
+            </td>
+        </tr>
+    </table>
+</div>

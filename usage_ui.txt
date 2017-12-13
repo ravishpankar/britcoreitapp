@@ -1,0 +1,12 @@
+britapp usage:
+-------------
+1. Browse to https://sxu1nvi1xl.execute-api.us-west-2.amazonaws.com/britapp/home
+2. In the risk menu,
+	select the item you want.
+	- Item RiskTypes will display all the risktypes in the left side. Clicking on a risktype will open a object create editor on the right. Submitting will not anything as it is dummy.
+	- Item Create RiskType will open open an create editor in the middle of the page.
+		Enter a name and add attributes with types enum, text, number and date.
+		For enum enum entries should be added in the form  <enum entry name> : <enum entry val>.
+		Entry name will be available for selection during risk object create attempt.
+	- Item Create Risk will open up an editor where the risktype has to be entered and sublitted first.
+		Then you may want to enter values for each attribute and dummy submit won't do anything.

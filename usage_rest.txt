@@ -1,0 +1,36 @@
+
+Usage of britapp rest api
+-----------------------------------------------
+1. Get risk types endpoint 
+	method : "GET", 
+	url : "http://<host>/britapp/risktypes",
+	headers : {
+	  "Content-Type" : "application/json"
+	}
+	
+	Returns a json list of risktype objects.
+	In case of any error, an error message is returned.
+	
+2.Get risk type endpoint 
+	method : "GET", 
+	url : "http://<host>/britapp/risktype/<risktypename>",
+	headers : {
+	  "Content-Type" : "application/json"
+	}
+	Returns a json risktype object.
+	In case of any error, an error message is returned
+	
+3. Create risk type endpoint
+	method : "POST", 
+	url : "http://<host>/britapp/risktype",
+	headers : {
+	  "Content-Type" : "application/json"
+	}
+	body : a JSON object
+	
+	Creates a risk type.
+	An example risk type JSON Object : {"rtname" :"examplert", "rtattributes" : [{"rtaname" : "a1", "rtatype" : "enum", "enum" : {"a" : "1", "b" : "2", "c" : "3"}}, 
+								{"rtaname" : "a2", "rtatype" : "date"},
+								{"rtaname" : "a3", "rtatype" : "text"},
+								{"rtaname" : "a4", "rtatype" : "number"}]}
+	In case of any error, an error message is returned.

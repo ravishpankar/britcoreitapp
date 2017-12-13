@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://bcit-static.s3.amazonaws.com/risk.js"></script>
+    <script src="https://bcit-static.s3.amazonaws.com/create.js"></script>
+    <script src="https://bcit-static.s3.amazonaws.com/attr.js"></script>
+    <script src="https://bcit-static.s3.amazonaws.com/risktype.js"></script>
+    <script src="https://bcit-static.s3.amazonaws.com/attri.js"></script>
+    <script src="https://bcit-static.s3.amazonaws.com/risktypes.js"></script>
+    <script src="https://bcit-static.s3.amazonaws.com/enum.js"></script>
+    <script src="https://bcit-static.s3.amazonaws.com/enumentry.js"></script>
+    <title>BriteCore</title>
+</head>
+<body ng-app="risk" ng-controller="riskCtrl">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">BriteCore</a>
+            </div>
+           <ul class="nav navbar-nav navbar-left">
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Risks<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#" ng-click="showRTC()">Create RiskType</a></li>
+                  <li><a href="#" ng-click="showRC()">Create Risk</a></li>
+                  <li><a href="#" ng-click="showRTypes()">RiskTypes</a></li>
+                </ul>
+              </li>
+           </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row" ng-if="v == 0">
+            <div class="col-sm-6 col-sm-offset-3">
+                <create></create>
+            </div>
+        </div>
+        <div class="row" ng-if="v == 1">
+            <div class="col-sm-6 col-sm-offset-3">
+                <risktype nosearch="F" passedname=""></risktype>
+            </div>
+        </div>
+        <div class="row" ng-if="v == 2">
+            <div class="col-sm-3 col-sm-offset-0">
+                <risktypes setrtname="setrtname"></risktypes>
+            </div>
+            <div class="col-sm-6" ng-if="hack == 0">
+                <risktype nosearch="T" passedname="rtname"></risktype>
+            </div>
+            <div class="col-sm-6" ng-if="hack == 1">
+                <risktype nosearch="T" passedname="rtname"></risktype>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

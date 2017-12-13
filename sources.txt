@@ -1,0 +1,10 @@
+Source code:
+metarisk is the django app.
+1. models.py contains the orm models.
+2. views.py contains the implementation of rest api end points
+3. globals and error.py are used for global variables and exception handling respectively.
+4. static folder at the root contains js and templates for angular js components. Bootstrap is used along with angular js.
+
+Versions:
+Python 2.7, django1.11, Angular js 1.5.7, Bootstrap 3.3.6
+

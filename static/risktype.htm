@@ -1,0 +1,17 @@
+<div class="well well-sm" ng-if="$ctrl.nosearch == 'F' || !angular.isUndefined($ctrl.passedname) && $ctrl.passedname != ''">
+	<form role="form" name="rrtf">
+		<h2>Risk type {{$ctrl.passedname}} object create</h2>
+		<div class="form-group" ng-if="$ctrl.nosearch == 'F'">
+			<input type="text" class="form-control" maxlength="50" ng-model="$ctrl.rtname" placeholder="Enter risk type name here" required name="rtname">
+            <button type="submit" class="btn btn-default btn-sm" ng-click="$ctrl.getrt($ctrl.rtname)">Submit</button>
+        </div>
+        <div class="form-group">
+			<h4 ng-show="$ctrl.attrlist.length != 0">Attributes</h4>
+			<attri ng-repeat="attr in $ctrl.attrlist" attr='attr'></attri>
+			<br></br>
+			<div class="text-right" ng-show="$ctrl.attrlist.length != 0">
+				<button type="submit" class="btn btn-default btn-sm">Dummy Submit</button>
+			</div>
+        </div>
+	</form>
+</div>

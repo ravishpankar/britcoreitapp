@@ -1,0 +1,6 @@
+Known problems:
+1. Bootstrap modal can be used to display ui operation status.
+2. Loading of editors and operation progress can be shown with a wait cursor.
+3. Risktypes list in the ui can be paginated.
+4. Concurrency issues should be solved while creating risk type.
+5. Database migrations parameters should be isolated from the code.

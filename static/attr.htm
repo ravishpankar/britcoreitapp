@@ -1,0 +1,20 @@
+<div class="form-group">
+    <table class="table table-striped">
+        <tr>
+            <td>
+                <input type="text" style="" class="form-control" maxlength="50" ng-model="$ctrl.attr.rtaname" placeholder="Enter attribute name here">
+            </td>
+            <td>
+                <select class="form-control" ng-model="$ctrl.attr.rtatype">
+                    <option>text</option>
+                    <option>date</option>
+                    <option>enum</option>
+                    <option>number</option>
+                </select>
+            </td>
+            <td ng-show="$ctrl.attr.rtatype == 'enum'">
+                <enum et="$ctrl.attr.et"></enum>
+            </td>
+        </tr>
+    </table>
+</div>

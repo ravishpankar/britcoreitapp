@@ -1,0 +1,8 @@
+<div class="well well-sm">
+    <h2>Risk types</h2>
+    <ul>
+        <li ng-repeat="rt in $ctrl.rtlist">
+            <a href="#" ng-click="$ctrl.setrtname(rt.rtname)" ><label>{{rt.rtname}}</label></a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,17 @@
+<div class="well well-sm">
+	<form role="form" name="artf">
+		<div class="form-group">
+			<h2>Risk type create</h2>
+			<input type="text" class="form-control" maxlength="50" ng-model="$ctrl.rtname" placeholder="Enter risk type name here" required name="rtname">
+			<h4>Attributes</h4>
+			<div class="text-left">
+				<button class="btn btn-default btn-sm" ng-click="$ctrl.addattr()">Add Attribute</button>
+			</div>
+			<attr ng-repeat="attr in $ctrl.attrlist" attr='attr'></attr>
+			<br></br>
+			<div class="text-right">
+				<button type="submit" class="btn btn-default btn-sm" ng-click="$ctrl.creatert()">Create</button>
+			</div>
+        </div>
+	</form>
+</div>
